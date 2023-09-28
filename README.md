@@ -13,3 +13,17 @@ this repo is a clone of https://github.com/varadbhogayata/varadbhogayata.github.
 
 
 <img width="1402" alt="Screenshot 2023-09-28 at 15 58 19" src="https://github.com/amirseken/amirseken.github.io/assets/74365816/fb3c500f-ef24-406c-bba8-231c992efc25">
+
+# Activity 3
+
+<img width="992" alt="Screenshot 2023-09-28 at 16 20 54" src="https://github.com/amirseken/amirseken.github.io/assets/74365816/b3d2c8fd-d748-4c5c-a87c-4e948add1cf6">
+
+
+<img width="919" alt="Screenshot 2023-09-28 at 16 19 51" src="https://github.com/amirseken/amirseken.github.io/assets/74365816/4e010c12-4c31-4fd2-b43a-862c6cc5d340">
+
+
+
+
+
+
+
