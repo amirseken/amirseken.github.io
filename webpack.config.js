@@ -13,20 +13,15 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /.s?css$/,
-      use: [
+      
+        test: /.s?css$/,
+        use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              // options...
-            }
-          }
+          'css-loader',
+          'sass-loader' // This will now use the modern `sass` package
         ]
+      
+      
     }]
   },
   optimization: {
@@ -39,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/main.bundle.css'
+      filename: 'css/[name].bundle.css'
     }),
   ]
 };
