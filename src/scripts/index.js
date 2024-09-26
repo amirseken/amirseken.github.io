@@ -1,4 +1,4 @@
-require('./styles.scss');
+require('../styles/styles.scss');
 
 var Flickity = require('flickity');
 require('flickity-imagesloaded');
