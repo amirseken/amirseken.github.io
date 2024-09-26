@@ -1,5 +1,5 @@
 {
-  "name": "devfolio",
+  "name": "CV",
   "version": "1.5.0",
   "description": "Amir's Portfolio",
   "main": "webpack.config.js",
