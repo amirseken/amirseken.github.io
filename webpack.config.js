@@ -4,10 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 module.exports = {
   entry: './src/scripts/index.js',
-
   output: {
     path: path.resolve(__dirname, 'public/assets/js'),
     filename: 'bundle.js'
@@ -27,14 +25,14 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      
       new CssMinimizerPlugin(),
       new TerserJSPlugin({})
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'public/assets/[name].bundle.css'
+      filename: '../styles/[name].bundle.css' // Adjusted path
     }),
   ],
   watch: true,
