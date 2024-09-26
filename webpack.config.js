@@ -2,39 +2,41 @@ const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-  entry: './src/index.js',
-  watch: true,
+  entry: './src/scripts/index.js',
+
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    path: path.resolve(__dirname, 'public/assets/js'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [{
-      
-        test: /.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader' // This will now use the modern `sass` package
-        ]
-      
-      
+      test: /.s?css$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader' // Modern `sass` package
+      ]
+    }, {
+      test: /\.(png|jpe?g|gif|svg)$/i,
+      type: 'asset/resource',
     }]
   },
   optimization: {
     minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`,
+      
       new CssMinimizerPlugin(),
       new TerserJSPlugin({})
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].bundle.css'
+      filename: 'public/assets/[name].bundle.css'
     }),
-  ]
+  ],
+  watch: true,
+  devtool: 'source-map', // Optional for easier debugging
 };
