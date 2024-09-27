@@ -1,69 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Amir Seken</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amir Seken | Portfolio</title>
   <link rel="icon" href="public/assets/imgs/favicon/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="public/assets/styles/main.bundle.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <style>
+    /* Additional styles for better visuals */
+    body {
+      font-family: 'Arial', sans-serif; /* Font change for better readability */
+      line-height: 1.6; /* Increase line height for better text spacing */
+      background-color: #f8f9fa; /* Light background for contrast */
+    }
+    
+    .hero {
+      background: linear-gradient(to right, #0056b3, #0056b3); /* Gradient background for the hero section */
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for navbar */
+    }
+
+    .section {
+      padding: 3rem 1.5rem; /* More padding for section spacing */
+    }
+
+    .title {
+      font-weight: bold; /* Bold titles for emphasis */
+    }
+
+    .card {
+      margin-bottom: 1.5rem; /* Spacing between cards */
+      border-radius: 8px; /* Rounded corners for cards */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for cards */
+    }
+
+    .modal-card-title {
+      font-weight: bold; /* Bold modal title */
+      margin-right: 10px; /* Adds spacing between title and icon */
+      flex-grow: 0;
+    }
+
+    footer {
+      background-color: #007bff; /* Footer background color */
+      color: white; /* Footer text color */
+      padding: 1rem 0; /* Padding for footer */
+    }
+
+    .tags .tag {
+      margin: 0.25rem; /* Margin for tags for better spacing */
+    }
+    .navbar-menu {
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center all items */
+      align-items: center; /* Center items vertically */
+      width: 100%; /* Full width for the menu */
+    }
+
+    .navbar-menus {
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center items in the navbar */
+        align-items: center; /* Center items vertically */
+        gap: 40px; /* Space between items */
+    }
+
+    .about-content {
+      display: flex; /* Use flexbox for layout */
+      align-items: center; /* Center items vertically */
+      justify-content: space-between; /* Space between text and image */
+      gap: 100px; /* Space between image and text */
+    }
+
+    .profile-pic img {
+        width: 900px; /* Adjust size as needed */
+        height: 200px; /* Keep width and height equal for a circle */
+        border-radius: 50%; /* Makes the image round */
+
+        border: 2px solid white; /* Optional border */
+    }
+
+  </style>
 </head>
 
 <body>
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-item is-hidden-desktop">
-        <a href="https://github.com/amirseken" class="icon is-large has-text-light">
-          <i class="fab fa-2x fa-github"></i>
-        </a>
-      </div>
-      <!-- <div class="navbar-item is-hidden-desktop">
-        <a href="https://fullstackmark.com" class="icon is-large has-text-light">
-          <i class="fas fa-2x fa-globe"></i>
-        </a>
-      </div> -->
-    </div>
     <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://github.com/amirseken" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-github"></i>
-          </a>
+        <div class="navbar-menus">
+            <div class="navbar-item">
+                <a href="https://github.com/amirseken" target="_blank" class="icon is-large has-text-light">
+                    <i class="fab fa-2x fa-github"></i>
+                </a>
+            </div>
+            <!-- Profile Picture -->
+            
+            <div class="navbar-item">
+                <a href="https://www.linkedin.com/in/amirseken/" target="_blank" class="icon is-large has-text-light">
+                    <i class="fab fa-2x fa-linkedin-in" style="color: #ffffff;"></i>
+                </a>
+            </div> 
+            
         </div>
-        <!-- <div class="navbar-item">
-          <a href="https://fullstackmark.com" class="icon is-large has-text-light">
-            <i class="fas fa-2x fa-globe"></i>
-          </a>
-        </div> -->
-      </div>
     </div>
   </nav>
 
+
   <section class="hero is-primary">
     <div class="hero-body">
-      <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="public/assets/imgs/amirseken_photo.jpg">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">
-              Amir Seken
-            </h1>
-            <h2 class="subtitle">
-              Software Developer, Full Stack, ON, Canada
-            </h2>
-            <p>
-              <a href="public/assets/docs/AmirSekenResume.pdf" class="icon has-text-light">
-                <i class="fas fa-file-word"></i> <strong>Resume</strong>
-              </a>
-            </p>
-          </div>
-        </div>
+      <div class="container has-text-centered">
+
+        <h1 class="title is-1">Amir Seken</h1>
+        <h2 class="subtitle">Software Developer, Full Stack, ON, Canada</h2>
+        <p>
+          <a href="public/assets/docs/AmirSekenResume.pdf" target = "_blank" class="icon has-text-light">
+            <i class="fas fa-file-word"></i> <strong>Resume</strong>
+          </a>
+        </p>
       </div>
     </div>
   </section>
@@ -71,13 +126,22 @@
   <section class="section">
     <div class="container">
       <h1 class="title">About Me</h1>
+
       <hr />
-      <p>Hello there! My name is Amir Seken. I am an aspiring junior software engineer with 2 years of experience in developing,
-        designing, and debugging software applications. I graduated from Computer Engineering at University of Toronto, with a minor in AI Engineering and a certificate in Business Engineering. I specialize in full-stack
-        development with expertise in Python, C#, HTML, CSS, JavaScript, and
-        React. Fun fact about me: I am an avid chess and table tennis player!</p>
+      <div class="about-content">
+        <p>Hello there! My name is Amir Seken. I am an aspiring junior software engineer with 2 years of experience in developing,
+          designing, and debugging software applications. I graduated from Computer Engineering at the University of Toronto, with a minor in AI Engineering and a certificate in Business Engineering. I specialize in full-stack
+          development with expertise in Python, C#, HTML, CSS, JavaScript, and React. Fun fact about me: I am an avid chess and table tennis player!</p>
+        
+      
+
+        <div class=" profile-pic">
+          <img src="public/assets/imgs/photomyself.jpg" alt="Profile Picture">
+        </div>
+      </div>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
       <h1 class="title">Experience</h1>
@@ -87,21 +151,27 @@
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="public/assets/imgs/dunder-mifflin-logo.png" alt="Placeholder image">
+                <img src="public/assets/imgs/quanta_technology_logo.png" alt="Quanta Technology logo">
               </figure>
             </div>
             <div class="media-content">
               <p class="title is-4">Quanta Technology</p>
-              <p class="subtitle is-6">Software Engineering Intern - <time datetime="2022">2022</time> - <time
-                  datetime="2023">2023</time> </p>
+              <p class="subtitle is-6">Software Engineering Intern - <time datetime="2022">2022</time> - <time datetime="2023">2023</time></p>
             </div>
           </div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
+            <p>Responsible for developing and implementing desktop and web applications.</p>
             <ul>
-              <li>Noteworthy achievment here.</li>
-              <li>Noteworthy achievment here.</li>
-              <li>Noteworthy achievment here.</li>
+              <li>Developed UI elements and backend functions for circuit fault analysis
+                desktop applications using C# and .NET Framework, enhancing client
+                satisfaction by 10%.</li>
+              <li>Implemented a reusable component library (e.g., search bar,
+                progression bar, buttons, dashboards) to improve the aesthetics and
+                usability of the fault calculator application's UI, benefiting over 5 B2B
+                clients.</li>
+              <li>Assembled an interactive Power BI dashboard for Fault Data Analysis,
+                enhancing communication and resulting in a 15% reduction in reporting
+                errors.</li>
             </ul>
             <div class="tags">
               <span class="tag">C#</span>
@@ -116,25 +186,30 @@
           </div>
         </div>
       </div>
-      <div class="card card-gap">
+
+      <div class="card">
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="public/assets/imgs/pied-piper-logo.png" alt="Placeholder image">
+                <img src="public/assets/imgs/gulfstream_corporation.png" alt="Gulfstream Corporation logo">
               </figure>
             </div>
             <div class="media-content">
               <p class="title is-4">Gulfstream Corporation</p>
-              <p class="subtitle is-6">Frontend Developer - <time datetime="2021"></time></p>
+              <p class="subtitle is-6">Frontend Developer - <time datetime="2021"> 2021</time></p>
             </div>
           </div>
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
+            <p>Responsible for the frontend development of the company's website.</p>
             <ul>
-              <li>Noteworthy achievment here.</li>
-              <li>Noteworthy achievment here.</li>
-              <li>Noteworthy achievment here.</li>
+              <li>Enhanced the UI and UX of the company’s website by implementing
+                elements such as search bars, dashboards, and buttons, utilizing HTML,
+                CSS, JavaScript, and React.</li>
+              <li>Optimized website responsiveness to adapt seamlessly to different
+                screen sizes, leading to a 20% reduction in bounce rates.</li>
+              <li>Designed desktop and mobile layouts for the company website using
+                Figma, receiving design approval from the Project manager.</li>
             </ul>
             <div class="tags">
               <span class="tag">HTML</span>
@@ -150,6 +225,7 @@
     </div>
   </section>
 
+  
   <section class="section">
     <div class="container">
       <h1 class="title">Projects</h1>
@@ -159,25 +235,25 @@
           <div class="tile">
             <div class="tile is-parent">
               <article class="tile is-child notification">
-                <p class="title">Project title</p>
+                <p class="title">ReadIT</p>
                 <figure class="image is-3by2">
-                  <img class="modal-trigger" data-target="project-1-modal" src="public/assets/imgs/projects/project-1-cover.png">
+                  <img class="modal-trigger" data-target="project-1-modal" src="public/assets/imgs/projects/ReadIT.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification">
-                <p class="title">Project title</p>
+                <p class="title">FlyerChimp</p>
                 <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-2-modal" src="public/assets/imgs/projects/project-2-cover.png">
+                  <img class="modal-trigger" data-target="project-2-modal" src="public/assets/imgs/projects/QRCode.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification">
-                <p class="title">Project title</p>
+                <p class="title">FaceRace</p>
                 <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-3-modal" src="public/assets/imgs/projects/project-3-cover.png">
+                  <img class="modal-trigger" data-target="project-3-modal" src="public/assets/imgs/projects/FaceRace-pic.png" >
                 </figure>
               </article>
             </div>
@@ -189,28 +265,21 @@
           <div class="tile">
             <div class="tile is-parent">
               <article class="tile is-child notification">
-                <p class="title">Project title</p>
+                <p class="title">WonderLust Mapper</p>
                 <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-4-modal" src="public/assets/imgs/projects/project-4-cover.png">
+                  <img class="modal-trigger" data-target="project-4-modal" src="public/assets/imgs/projects/wonderlust_photo.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification">
-                <p class="title">Project title</p>
+                <p class="title">Galaga Game</p>
                 <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-5-modal" src="public/assets/imgs/projects/project-5-cover.png">
+                  <img class="modal-trigger" data-target="project-5-modal" src="public/assets/imgs/projects/galaga.png" >
                 </figure>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Project title</p>
-                <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-6-modal" src="public/assets/imgs/projects/project-6-cover.png">
-                </figure>
-              </article>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -219,21 +288,27 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title">Education / Training</h1>
+      <h1 class="title">Education</h1>
       <hr />
       <div class="card">
         <div class="card-content">
-          <div class="content">
-            <p class="title is-4">University of Toronto</p>
-            <p class="subtitle is-6">BASc in Computer Engineering - <time datetime="2019">2019</time> - <time
-                datetime="2024">2024</time></p>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img src="public/assets/imgs/UofT_logo.png" alt="University of Toronto logo">
+              </figure>
+            </div>
+            <div class = "media-content">
+              <p class="title is-4">University of Toronto</p>
+              <p class="subtitle is-6">BASc in Computer Engineering - <time datetime="2016-9">September 2016</time> - <time
+                  datetime="2019-9">Sepemter 2019</time></p>
+            </div>
           </div>
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris.
             <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Honor List</li>
+              <li>Minor in AI Engineering</li>
+              <li>Certificate in Business Engineering</li>
             </ul>
           </div>
         </div>
@@ -242,34 +317,34 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Contact</h1>
+  <section class="section" style = "background-color: #0056b3 ">
+    <div class="container"  >
+      <h1 class="title" style = "color: #ffffff">Contact</h1>
       <hr />
       <nav class="level">
         <div class="level-item has-text-centered">
-          <div>
-            <a href="https://github.com/amirseken" class="icon is-large">
+          <div >
+            <a href="https://github.com/amirseken" target ="_blank" class="icon is-large" style = "color: #ffffff " >
               <i class="fab fa-2x fa-github"></i>
             </a>
-            <p class="heading"><a href="https://github.com/amirseken">github.com/amirseken</a></p>
+            <p class="heading"><a href="https://github.com/amirseken" target ="_blank" style = "color: #ffffff ">github.com/amirseken</a></p>
           </div>
         </div>
-    
+        
         <div class="level-item has-text-centered">
           <div>
-            <a href="mailto:markmacneil@gmail.com" class="icon is-large">
+            <a href="mailto:sekenamir@gmail.com" class="icon is-large" style = "color: #ffffff ">
               <i class="fas fa-2x fa-envelope"></i>
             </a>
-            <p class="heading"><a href="mailto:sekenamir@gmail.com">sekenamir@gmail.com</a></p>
+            <p class="heading"><a href="mailto:sekenamir@gmail.com" style = "color: #ffffff ">sekenamir@gmail.com</a></p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <a href="https://www.linkedin.com/in/amirseken" class="icon is-large">
+            <a href="https://www.linkedin.com/in/amirseken" target ="_blank" style = "color: #ffffff " class="icon is-large">
               <i class="fab fa-2x fa-linkedin-in"></i>
             </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/amirseken">linkedin</a></p>
+            <p class="heading"><a href="https://www.linkedin.com/in/amirseken" target ="_blank" style = "color: #ffffff ">linkedin/amirseken</a></p>
           </div>
         </div>
       </nav>
@@ -281,36 +356,39 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Project title</p>
-        <button class="delete" aria-label="close"></button>
+        <p class="modal-card-title">ReadIT</p>
+        <a href="https://github.com/amirseken/ReadIT-ML" target ="_blank" class="icon is-large" style = "color: #000000 " >
+          <i class="fab fa-2x fa-github" ></i>
+        </a>
+        <button class="delete" aria-label="close" style = "margin-left: 75%;"></button>
       </header>
       <section class="modal-card-body">
-
-        <div id="project-1-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="public/assets/imgs/carousel/1.png">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="public/assets/imgs/carousel/2.png">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="public/assets/imgs/carousel/3.png">
-          </figure>
-        </div>
-
+        <a href="public/assets/imgs/Poster.png" target = "_blank" class=" has-text-dark" style="margin-bottom:20px ;">
+          <strong style="text-decoration: underline;">Click to expand</strong>
+       </a>
+        <figure class="image" style="margin-top:20px ;">
+          <img src="public/assets/imgs/Poster.png" style="width: 600px; height: 300px;"alt="ReadIT Poster">
+         </figure>
+        
         <div class="content">
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo
-            consequat.</p>
+          <p>This is a ML-powered software system that interprets handwritten notes and 
+            seamlessly converts them into digital format within the AgroLedger 
+            information management system. Our implemented solution helps our client manage
+             livestock traceability by standardizing documents with the aid of artificial intelligence (AI). 
+             AI is a powerful and wide-ranged tool that our team will utilize as it allows
+              automation of the documenting process.</p>
 
           <div class="tags">
-            <span class="tag">angular</span>
-            <span class="tag">mongo</span>
-            <span class="tag">typscript</span>
-            <span class="tag">node</span>
+            <span class="tag">Python</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">EAST</span>
+            <span class="tag">OCR</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">OpenCV</span>
+
           </div>
 
         </div>
@@ -322,15 +400,174 @@
     </div>
   </div>
 
-  
+  <div id="project-2-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">FlyerChimp</p>
+        <a href="https://github.com/amirseken/FlyerChimp-webapp" target ="_blank" class="icon is-large" style = "color: #000000 " >
+          <i class="fab fa-2x fa-github" ></i>
+        </a>
+        <button class="delete" aria-label="close" style = "margin-left: 63%;"></button>
+      </header>
+      <section class="modal-card-body">
+        <a href="public/assets/docs/PresentationFlyerChimp.pdf" target = "_blank" class=" has-text-dark">
+          <strong style="text-decoration: underline;">Presentation link</strong>
+       </a>
+        
+        <div class="content">
 
-  
+          <p>
+            
+            An interactive event flyer dashboard that enables users to view and make their events.
+             The platform features functionalities such as a search bar, comment section, report button,
+              account service, and like button. 
+            The primary benefit of this application is to provide greater accessibility for students
+             to see all types of postings on a single application, and to save time and effort when 
+             selecting which events, clubs, and services to participate in. 
+            Worked in a team of 7.
+            Written in Python, HTML, CSS, and Javascript.</p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Agile</span>
+          </div>
+
+        </div>
+
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="project-3-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">FaceRace</p>
+        <a href="https://github.com/amirseken/FaceRace-ML" target ="_blank" class="icon is-large" style = "color: #000000 " >
+          <i class="fab fa-2x fa-github" ></i>
+        </a>
+        <button class="delete" aria-label="close" style = "margin-left: 65%;"></button>
+      </header>
+      <section class="modal-card-body">
+        <a href="public/assets/docs/FaceRace Final Report.pdf" target = "_blank" class=" has-text-dark">
+          <strong style="text-decoration: underline;">Documentation link</strong>
+       </a>
+       <figure class="image">
+        <img src="public/assets/imgs/projects/FaceRaceModel.png" style="width: 600px; height: 300px;"alt="Face Race Pic">
+       </figure>
+        <div class="content">
+          <p>In team of 4, created Machine Learning Algorithm to classify images based on their race.
+            Uses CNN in the architecture. Outputs: Asian, White, Black, Indian, Middle Eastern races. Implemented using Machine Learning 
+            techniques(CNN, transfer learning), Python, and Google Colab.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Google Colab</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">CNN</span>
+          </div>
+        </div>
+
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="project-4-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">WonderLust</p>
+        <a href="https://github.com/amirseken/WonderLust-Mapper" target ="_blank" class="icon is-large" style = "color: #000000 " >
+          <i class="fab fa-2x fa-github"></i>
+        </a>
+        <button class="delete" aria-label="close" style = "margin-left: 60%;"></button>
+      </header>
+      <section class="modal-card-body">
+        <a href="public/assets/docs/WonderLust Presentation.pdf" target = "_blank" class=" has-text-dark">
+          <strong style="text-decoration: underline;">Presentation link</strong>
+       </a>
+        <div class="content" style="margin-top: 10px;">
+          <p>This project is a remake of Google Maps. It used OSM data to visualize more than 15 cities across the world,
+             as well as display various points of interest such as restaurants. It uses A* algorithm to find the fastest path between two points.
+              Also, it utilizes the simulated annealing algorithm to find the fastest path a package delivery truck can take. Finally, 
+              this project's graphical front-end was developed using C++, GTK and EasyGL.</p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">EasyGL</span>
+            <span class="tag">GTK</span>
+            <span class="tag">C</span>
+          </div>
+
+        </div>
+        <div >
+          
+         
+          
+          <video width="600" height="400" controls>
+              <source src="public/assets/videos/wonderlust_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+        </div>
+
+        
+
+      </section>
+      <footer class="modal-card-foot">
+        
+        <button class="button is-success">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="project-5-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Galaga</p>
+        <a href="https://github.com/amirseken/Galaga-Game" target ="_blank" class="icon is-large" style = "color: #000000 " >
+          <i class="fab fa-2x fa-github"></i>
+        </a>
+        <button class="delete" aria-label="close" style = "margin-left: 70%;"></button>
+      </header>
+      <section class="modal-card-body" >
+        <a href="public/assets/docs/GALAGA game manual.pdf" target = "_blank" class=" has-text-dark">
+          <strong style="text-decoration: underline;">Manual link</strong>
+       </a>
+        <div class="content" style = "margin-top: 20px">
+          <p> The Galaga emulating game developed in CPUlator Simulator using ARM Assembly and C. 
+            Tested using DE1_SOC board and presented in the final evaluation at the end of the course. 
+            Scored 85%.</p>
+          <div class="tags">
+            <span class="tag">C</span>
+            <span class="tag">ARM Assembly</span>
+            <span class="tag">CPUlator</span>
+            <span class="tag">DE1_SOC</span>
+          </div>
+        </div>
+
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Close</button>
+      </footer>
+    </div>
+  </div>
+
 
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
         <a href="https://github.com/amirseken/personal-site" target="_blank" class="icon has-text-primary">
-          <i class="fab fa-github"></i> <strong>github</strong></a>
+          <i class="fab fa-github"></i> <strong>amirseken</strong></a>
       </p>
     </div>
   </footer>
