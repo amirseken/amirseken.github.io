@@ -59,6 +59,8 @@
       justify-content: center; /* Center all items */
       align-items: center; /* Center items vertically */
       width: 100%; /* Full width for the menu */
+      background-color: #454545 !important;
+
     }
 
     .navbar-menus {
@@ -66,6 +68,7 @@
         justify-content: center; /* Center items in the navbar */
         align-items: center; /* Center items vertically */
         gap: 40px; /* Space between items */
+        
     }
 
     .about-content {
@@ -82,30 +85,101 @@
 
         border: 2px solid white; /* Optional border */
     }
+    /* Hide the navbar-menu by default */
+.navbar-menu {
+    display: none;
+}
+
+/* Display the navbar-menu as flexbox on larger screens */
+@media screen and (min-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Show the hamburger menu on smaller screens */
+.navbar-burger {
+    display: block;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-burger {
+        display: none;
+    }
+}
+
+/* When the hamburger is active, show the menu (for small screens) */
+.navbar-menu.is-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Reduce gap between items */
+    text-align: center; /* Center-align the text */
+  }
+
+  .profile-pic img {
+    width: 150px; /* Smaller image on mobile */
+    height: 150px; /* Maintain aspect ratio */
+  }
+}
+
+
+.delete {
+    position: absolute; /* Use absolute positioning */
+    right: 20px; /* 20px from the right border */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Optionally, you can add styles for hover effects */
+.delete:hover {
+    opacity: 0.8; /* Slightly fade the button on hover */
+}
+
+
 
   </style>
 </head>
 
 <body>
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
+    <div class="navbar-brand">
+        <!-- Hamburger icon for mobile -->
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-menus">
             <div class="navbar-item">
                 <a href="https://github.com/amirseken" target="_blank" class="icon is-large has-text-light">
                     <i class="fab fa-2x fa-github"></i>
                 </a>
             </div>
-            <!-- Profile Picture -->
-            
             <div class="navbar-item">
                 <a href="https://www.linkedin.com/in/amirseken/" target="_blank" class="icon is-large has-text-light">
                     <i class="fab fa-2x fa-linkedin-in" style="color: #ffffff;"></i>
                 </a>
-            </div> 
-            
+            </div>
         </div>
     </div>
-  </nav>
+</nav>
+
 
 
   <section class="hero is-primary">
@@ -360,7 +434,7 @@
         <a href="https://github.com/amirseken/ReadIT-ML" target ="_blank" class="icon is-large" style = "color: #000000 " >
           <i class="fab fa-2x fa-github" ></i>
         </a>
-        <button class="delete" aria-label="close" style = "margin-left: 75%;"></button>
+        <button class="delete" aria-label="close" ></button>
       </header>
       <section class="modal-card-body">
         <a href="public/assets/imgs/Poster.png" target = "_blank" class=" has-text-dark" style="margin-bottom:20px ;">
@@ -572,7 +646,24 @@
     </div>
   </footer>
 
-  <script src="public/assets/js/bundle.js"></script>
+  <script src="public/assets/js/bundle.js">
+
+    
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get the elements
+    const burgerIcon = document.querySelector('.navbar-burger');
+    const navbarMenu = document.querySelector('#navbarMenu');
+
+    // Add a click event on the burger icon
+    burgerIcon.addEventListener('click', () => {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        burgerIcon.classList.toggle('is-active');
+        navbarMenu.classList.toggle('is-active');
+    });
+});
+</script>
 </body>
 
 </html>
